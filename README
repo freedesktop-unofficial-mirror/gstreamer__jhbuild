@@ -1,0 +1,11 @@
+
+Running jhbuild for GStreamer
+=============================
+
+ - Build and install jhbuild from GNOME svn.
+
+ - Edit the file 'gstreamer-jhbuildrc' to match your preferences.
+
+ - Run 'jhbuild -f gstreamer-jhbuildrc build'.
+
+
