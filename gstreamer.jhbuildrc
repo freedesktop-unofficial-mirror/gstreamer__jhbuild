@@ -1,5 +1,5 @@
-moduleset = 'http://webcvs.freedesktop.org/gstreamer/jhbuild/gstreamer.modules?revision=HEAD'
-#moduleset = os.path.expanduser('~/gst/jhbuild/gstreamer.modules')
+#moduleset = 'http://webcvs.freedesktop.org/gstreamer/jhbuild/gstreamer.modules?revision=HEAD'
+moduleset = os.path.expanduser('~/gst/jhbuild/gstreamer.modules')
 modules = [ 'gst-all' ]
 checkoutroot = os.path.expanduser('~/gst/jhbuild/build')
 prefix = os.path.expanduser('~/gst/jhbuild/install')

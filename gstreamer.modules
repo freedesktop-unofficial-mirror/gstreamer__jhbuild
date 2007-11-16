@@ -16,9 +16,13 @@
   <repository type="cvs" name="gstreamer"
      cvsroot=":pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer"
      password="" />
-  <repository type="cvs" name="liboil"
-     cvsroot=":pserver:anoncvs@cvs.freedesktop.org:/cvs/liboil"
-     password="" />
+  <repository type="git" name="liboil"
+      href="git://anongit.freedesktop.org/~ds/"/>
+  <repository type="arch" name="seamless"
+     archive="soto@freedesktop.org--2004-personal"
+     href="http://mirrors.sourcecontrol.net/soto@freedesktop.org--2004-personal/" />
+  <repository type="svn" name="thoggen"
+      href="https://thoggen.svn.sourceforge.net/svnroot/"/>
 
   <autotools id="liboil">
     <branch repo="liboil" module="liboil" checkoutdir="liboil" />
@@ -143,6 +147,19 @@
     <branch repo="elisa" module="trunk/elisa" checkoutdir="elisa"/>
   </autotools>
 
+  <autotools id="seamless">
+    <dependencies>
+    </dependencies>
+    <branch repo="seamless" module="seamless" checkoutdir="seamless"/>
+  </autotools>
+
+  <autotools id="thoggen">
+    <dependencies>
+      <dep package="gstreamer"/>
+    </dependencies>
+    <branch repo="thoggen" module="thoggen/trunk" checkoutdir="thoggen"/>
+  </autotools>
+
 
   <metamodule id="gst-all">
     <dependencies>
@@ -161,6 +178,8 @@
       <dep package="gst-fluendo-mpegdemux"/>
       <dep package="gst-fluendo-mpegmux"/>
       <dep package="gst-fluendo-mp3"/>
+      <dep package="seamless"/>
+      <dep package="thoggen"/>
     </dependencies>
   </metamodule>
 
