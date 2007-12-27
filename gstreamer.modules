@@ -5,6 +5,8 @@
 <moduleset>
   <repository type="git" name="git.freedesktop.org"
       href="git://anongit.freedesktop.org/git/"/>
+  <repository type="git" name="diracvideo"
+      href="git://diracvideo.schleef.org/git/"/>
   <repository type="svn" name="gnome"
       href="http://svn.gnome.org/svn/"/>
   <repository type="svn" name="carid"
@@ -102,7 +104,7 @@
       <dep package="gst-plugins-base"/>
       <dep package="liboil"/>
     </dependencies>
-    <branch repo="carid" module="trunk/schroedinger" checkoutdir="schroedinger"/>
+    <branch repo="diracvideo" module="schroedinger.git" checkoutdir="schroedinger"/>
   </autotools>
 
   <autotools id="tsmux">
