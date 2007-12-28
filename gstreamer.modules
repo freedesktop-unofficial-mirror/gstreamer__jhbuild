@@ -157,7 +157,7 @@
     <dependencies>
       <dep package="gstreamer"/>
     </dependencies>
-    <branch repo="thoggen" module="thoggen/trunk" checkoutdir="thoggen"/>
+    <branch repo="thoggen" module="thoggen/trunk/thoggen" checkoutdir="thoggen"/>
   </autotools>
 
 
@@ -178,7 +178,6 @@
       <dep package="gst-fluendo-mpegdemux"/>
       <dep package="gst-fluendo-mpegmux"/>
       <dep package="gst-fluendo-mp3"/>
-      <dep package="seamless"/>
       <dep package="thoggen"/>
     </dependencies>
   </metamodule>
@@ -186,6 +185,7 @@
   <metamodule id="broken">
     <dependencies>
       <dep package="elisa"/>
+      <dep package="seamless"/>
     </dependencies>
   </metamodule>
 
