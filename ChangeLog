@@ -1,0 +1,5 @@
+2008-03-12  Andy Wingo  <wingo@pobox.com>
+
+	* gstreamer.modules: Add gst-plugins-gl package. Add liboil as a
+	dep of gst-plugins-base.
+
