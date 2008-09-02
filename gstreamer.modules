@@ -14,7 +14,7 @@
   <repository type="svn" name="fluendo"
       href="https://svn.fluendo.com/gstreamer/svn/"/>
   <repository type="svn" name="elisa"
-      href="https://svn.fluendo.com/elisa/svn/"/>
+      href="https://code.fluendo.com/elisa/svn/"/>
   <repository type="cvs" name="gstreamer"
      cvsroot=":pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer"
      password="" />
@@ -23,6 +23,10 @@
      href="http://mirrors.sourcecontrol.net/soto@freedesktop.org--2004-personal/" />
   <repository type="svn" name="thoggen"
       href="https://thoggen.svn.sourceforge.net/svnroot/"/>
+  <repository type="darcs" name="farsight"
+      href="http://darcs.collabora.co.uk/darcs/farsight/"/>
+  <repository type="svn" name="wikimedia"
+      href="http://svn.wikimedia.org/svnroot/"/>
 
   <autotools id="liboil">
     <branch repo="git.freedesktop.org" module="liboil.git" checkoutdir="liboil" />
@@ -122,31 +126,6 @@
     <branch repo="diracvideo" module="schroedinger.git" checkoutdir="schroedinger"/>
   </autotools>
 
-  <autotools id="tsmux">
-    <dependencies>
-      <dep package="gstreamer"/>
-      <dep package="gst-plugins-base"/>
-    </dependencies>
-    <branch repo="carid" module="trunk/libtsmux" checkoutdir="tsmux"/>
-  </autotools>
-
-  <autotools id="gst-fluendo-mpegdemux">
-    <dependencies>
-      <dep package="gstreamer"/>
-      <dep package="gst-plugins-base"/>
-    </dependencies>
-    <branch repo="fluendo" module="trunk/gst-fluendo-mpegdemux" checkoutdir="gst-fluendo-mpegdemux"/>
-  </autotools>
-
-  <autotools id="gst-fluendo-mpegmux">
-    <dependencies>
-      <dep package="gstreamer"/>
-      <dep package="gst-plugins-base"/>
-      <dep package="tsmux"/>
-    </dependencies>
-    <branch repo="fluendo" module="trunk/gst-fluendo-mpegmux" checkoutdir="gst-fluendo-mpegmux"/>
-  </autotools>
-
   <autotools id="gst-fluendo-mp3">
     <dependencies>
       <dep package="gstreamer"/>
@@ -173,10 +152,22 @@
   <autotools id="thoggen">
     <dependencies>
       <dep package="gstreamer"/>
+      <dep package="gst-plugins-base"/>
     </dependencies>
     <branch repo="thoggen" module="thoggen/trunk/thoggen" checkoutdir="thoggen"/>
   </autotools>
 
+  <autotools id="gst-plugins-farsight">
+    <dependencies>
+      <dep package="gstreamer"/>
+      <dep package="gst-plugins-base"/>
+    </dependencies>
+    <branch repo="farsight" module="gst-plugins-farsight" checkoutdir="gst-plugins-farsight"/>
+  </autotools>
+
+  <ant id="cortado">
+    <branch repo="wikimedia" module="mediawiki/trunk/cortado" checkoutdir="cortado"/>
+  </ant>
 
   <metamodule id="gst-all">
     <dependencies>
@@ -186,17 +177,16 @@
       <dep package="gst-plugins-good"/>
       <dep package="gst-plugins-bad"/>
       <dep package="gst-plugins-ugly"/>
+      <dep package="gst-plugins-gl"/>
       <dep package="gst-ffmpeg"/>
       <dep package="gst-editor"/>
       <dep package="gnonlin"/>
       <dep package="gst-python"/>
       <dep package="pitivi"/>
       <dep package="schroedinger"/>
-      <dep package="tsmux"/>
-      <dep package="gst-fluendo-mpegdemux"/>
-      <dep package="gst-fluendo-mpegmux"/>
       <dep package="gst-fluendo-mp3"/>
       <dep package="thoggen"/>
+      <dep package="gst-plugins-farsight"/>
     </dependencies>
   </metamodule>
 

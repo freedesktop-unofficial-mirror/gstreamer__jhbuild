@@ -1,3 +1,8 @@
+2008-09-02  David Schleef  <ds@schleef.org>
+
+	* gstreamer.modules: Remove fluendo mpeg mux and demux packages,
+	  since they've been moved to -bad.
+
 2008-03-12  Andy Wingo  <wingo@pobox.com>
 
 	* gstreamer.modules: Add gst-plugins-gl package. Add liboil as a
