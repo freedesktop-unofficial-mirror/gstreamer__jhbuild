@@ -5,6 +5,8 @@
 <moduleset>
   <repository type="git" name="git.freedesktop.org"
       href="git://anongit.freedesktop.org/git/"/>
+  <repository type="git" name="gstreamer"
+      href="git://anongit.freedesktop.org/git/gstreamer/"/>
   <repository type="git" name="diracvideo"
       href="git://diracvideo.schleef.org/git/"/>
   <repository type="svn" name="gnome"
@@ -15,9 +17,6 @@
       href="https://svn.fluendo.com/gstreamer/svn/"/>
   <repository type="svn" name="elisa"
       href="https://code.fluendo.com/elisa/svn/"/>
-  <repository type="cvs" name="gstreamer"
-     cvsroot=":pserver:anoncvs@cvs.freedesktop.org:/cvs/gstreamer"
-     password="" />
   <repository type="arch" name="seamless"
      archive="soto@freedesktop.org--2004-personal"
      href="http://mirrors.sourcecontrol.net/soto@freedesktop.org--2004-personal/" />
@@ -100,14 +99,6 @@
     <branch repo="gstreamer" module="gst-python" checkoutdir="gst-python"/>
   </autotools>
 
-  <autotools id="gst-editor">
-    <dependencies>
-      <dep package="gstreamer"/>
-      <dep package="gst-plugins-base"/>
-    </dependencies>
-    <branch repo="gstreamer" module="gst-editor" checkoutdir="gst-editor"/>
-  </autotools>
-
   <autotools id="pitivi">
     <dependencies>
       <dep package="gstreamer"/>
@@ -179,7 +170,6 @@
       <dep package="gst-plugins-ugly"/>
       <dep package="gst-plugins-gl"/>
       <dep package="gst-ffmpeg"/>
-      <dep package="gst-editor"/>
       <dep package="gnonlin"/>
       <dep package="gst-python"/>
       <dep package="pitivi"/>
