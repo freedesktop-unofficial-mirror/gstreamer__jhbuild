@@ -30,11 +30,11 @@
 
   <autotools id="liboil">
     <branch repo="git.freedesktop.org" module="liboil.git" checkoutdir="liboil" />
-  </autotools> 
-  
+  </autotools>
+
   <autotools id="gstreamer">
     <branch repo="gstreamer" module="gstreamer" checkoutdir="gstreamer" />
-  </autotools> 
+  </autotools>
 
   <autotools id="gst-plugins-base">
     <dependencies>
