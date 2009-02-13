@@ -156,9 +156,11 @@
     <branch repo="collabora" module="gst-plugins-farsight" checkoutdir="gst-plugins-farsight"/>
   </autotools>
 
-  <ant id="cortado">
-    <branch repo="wikimedia" module="mediawiki/trunk/cortado" checkoutdir="cortado"/>
-  </ant>
+  <!--
+       <ant id="cortado">
+         <branch repo="wikimedia" module="mediawiki/trunk/cortado" checkoutdir="cortado"/>
+       </ant>
+  -->
 
   <metamodule id="gst-all">
     <dependencies>
