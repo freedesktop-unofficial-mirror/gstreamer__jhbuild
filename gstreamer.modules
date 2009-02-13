@@ -7,6 +7,8 @@
       href="git://anongit.freedesktop.org/git/"/>
   <repository type="git" name="gstreamer"
       href="git://anongit.freedesktop.org/git/gstreamer/"/>
+  <repository type="git" name="collabora"
+      href="git://git.collabora.co.uk/git/"/>
   <repository type="git" name="diracvideo"
       href="git://diracvideo.schleef.org/git/"/>
   <repository type="svn" name="gnome"
@@ -22,8 +24,6 @@
      href="http://mirrors.sourcecontrol.net/soto@freedesktop.org--2004-personal/" />
   <repository type="svn" name="thoggen"
       href="https://thoggen.svn.sourceforge.net/svnroot/"/>
-  <repository type="darcs" name="farsight"
-      href="http://darcs.collabora.co.uk/darcs/farsight/"/>
   <repository type="svn" name="wikimedia"
       href="http://svn.wikimedia.org/svnroot/"/>
 
@@ -153,7 +153,7 @@
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
     </dependencies>
-    <branch repo="farsight" module="gst-plugins-farsight" checkoutdir="gst-plugins-farsight"/>
+    <branch repo="collabora" module="gst-plugins-farsight" checkoutdir="gst-plugins-farsight"/>
   </autotools>
 
   <ant id="cortado">
