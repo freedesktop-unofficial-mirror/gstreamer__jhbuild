@@ -9,10 +9,10 @@
       href="git://anongit.freedesktop.org/git/gstreamer/"/>
   <repository type="git" name="collabora"
       href="git://git.collabora.co.uk/git/"/>
+  <repository type="git" name="pitivi"
+      href="git://git.pitivi.org/git/"/>
   <repository type="git" name="diracvideo"
       href="git://diracvideo.schleef.org/git/"/>
-  <repository type="svn" name="gnome"
-      href="http://svn.gnome.org/svn/"/>
   <repository type="svn" name="carid"
       href="https://svn.fluendo.com/carid/svn/"/>
   <repository type="svn" name="fluendo"
@@ -105,7 +105,7 @@
       <dep package="gst-python"/>
       <dep package="gnonlin"/>
     </dependencies>
-    <branch repo="gnome" module="pitivi/trunk" checkoutdir="pitivi"/>
+    <branch repo="pitivi" module="pitivi.git" checkoutdir="pitivi"/>
   </autotools>
 
   <autotools id="schroedinger">
