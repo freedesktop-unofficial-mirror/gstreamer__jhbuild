@@ -11,6 +11,8 @@
       href="git://git.collabora.co.uk/git/"/>
   <repository type="git" name="pitivi"
       href="git://git.pitivi.org/git/"/>
+  <repository type="git" name="entropywave"
+      href="git://code.entropywave.com/git/"/>
   <repository type="git" name="diracvideo"
       href="git://diracvideo.schleef.org/git/"/>
   <repository type="svn" name="carid"
@@ -26,6 +28,10 @@
       href="https://thoggen.svn.sourceforge.net/svnroot/"/>
   <repository type="svn" name="wikimedia"
       href="http://svn.wikimedia.org/svnroot/"/>
+
+  <autotools id="orc">
+    <branch repo="entropywave" module="orc" checkoutdir="orc" />
+  </autotools>
 
   <autotools id="liboil">
     <branch repo="git.freedesktop.org" module="liboil.git" checkoutdir="liboil" />
@@ -112,6 +118,7 @@
     <dependencies>
       <dep package="gstreamer"/>
       <dep package="gst-plugins-base"/>
+      <dep package="orc"/>
       <dep package="liboil"/>
     </dependencies>
     <branch repo="diracvideo" module="schroedinger.git" checkoutdir="schroedinger"/>
